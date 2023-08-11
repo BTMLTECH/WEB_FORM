@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chamber of Commerce Website for the Town of Idona" />
-  <meta name="author" content="Elvis Duru" />
+  <meta name="description" content="Visa and Immigration Services" />
+  <meta name="author" content="Adekunle Adesoji" />
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -37,11 +37,9 @@
         &times;
       </div>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="idona.html">Idona</a></li>
+        <li class="active"><a href="index.html">Visa and Immigration</a></li>
+        <li><a href="car.html">Car Hire Service</a></li>
         <li><a href="directory.html">Directory</a></li>
-        <li class="active"><a href="join.html">Join us</a></li>
-        <li><a href="contact.html">Contact us</a></li>
       </ul>
     </nav>
     <div id="menuBtn">
@@ -62,7 +60,7 @@
           src="https://www.swansea.ac.uk/international-campuslife/immigration/rsz_1visas-immigration-main-370x870.jpg"
           alt="Franklin" />
       </picture>
-      <h1>Nigeria's Leading Travel Management Company</h1>
+      <h1 style="color: #F5A412;">Nigeria's Leading Travel Management Company</h1>
     </div>
     <section id="contact">
       <h1>Visa and Immigration Services</h1>
@@ -101,7 +99,7 @@
             </label>
             <label class="top">
               Nationality
-              <select name="stormRegion">
+              <select name="stormRegion" id="Nationality">
                 <option selected disabled value="">Enter Nationality:</option>
               </select>
             </label>
@@ -124,7 +122,7 @@
             </label>
             <label class="top">
               Issued By (Country)
-              <select name="stormRegion">
+              <select name="stormRegion" id="issued_by">
                 <option selected disabled value="">Please enter Country name.</option>
               </select>
             </label>
@@ -132,26 +130,21 @@
               Expiration date
               <input type="date" required />
             </label>
-            <label class="top">
-              Nationality
-              <select name="stormRegion">
-                <option selected disabled value="">Enter Nationality:</option>
-              </select>
-            </label>
+
             <label class="top">
               Originating country
-              <select name="stormRegion">
+              <select name="stormRegion" id="Originating_country" required>
                 <option selected disabled value="">Enter Name of Originating Country</option>
               </select>
             </label>
             <label class="top">
               Country of Arrival
-              <select name="stormRegion">
+              <select name="stormRegion" id="Country_of_Arrival">
                 <option selected disabled value="">Enter Country of Arrival</option>
               </select>
             </label>
           </fieldset>
-          <center><input class="submitBtn" type="submit" value="Add My Business" /></center>
+          <center><input class="submitBtn" type="submit" value="Submit" /></center>
         </form>
 
       </div>
