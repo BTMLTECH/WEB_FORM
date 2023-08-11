@@ -41,7 +41,7 @@
             <ul>
                 <li><a href="index.html">Visa and Immigration</a></li>
                 <li class="active"><a href="car.html">Car Hire Service</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li><a href="">Airport Concierge</a></li>
             </ul>
         </nav>
         <div id="menuBtn">
@@ -58,20 +58,19 @@
                 <!-- <source media="(max-width: 500px)" srcset="images/join-us.jpg" />
         <source media="(max-width: 800px)" srcset="images/join-us.jpg" />
         <source media="(max-width: 1024px)" srcset="images/join-us.jpg" /> -->
-                <img src="https://www.swansea.ac.uk/international-campuslife/immigration/rsz_1visas-immigration-main-370x870.jpg"
-                    alt="Franklin" />
+                <img src="https://www.carhireinindia.com/images/banner-image.jpg" alt="Franklin" />
             </picture>
-            <h1 style="color: #F5A412;">Nigeria's Leading Travel Management Company</h1>
+            <h1 style="color: #fafafa;">Nigeria's Leading Travel Management Company</h1>
         </div>
         <section id="contact">
-            <h1>Visa and Immigration Services</h1>
+            <h1>Car Hire Services</h1>
             <div>
                 <form action="thanks.html" style="width: 100%;">
                     <fieldset>
                         <legend>BIO DATA</legend>
                         <label class="top">
                             Title
-                            <input type="text" name="title" required />
+                            <input type="text" name="title" placeholder="Mr/Mrs/Miss/Other" required />
                         </label>
                         <label class="top">
                             Name (as it appears on passport)
@@ -87,62 +86,88 @@
                         </label>
                     </fieldset>
                     <fieldset>
-                        <legend>Visa and Immigration Info</legend>
+                        <legend>Car Hire Services Info</legend>
                         <label class="top">
-                            Select type of Visa
+                            Select type of Car Hire
                             <select name="stormRegion" placeholder="Select type of Visa">
-                                <option selected disabled value="">Select type of Visa ...</option>
-                                <option value="Business Visa">Business Visa</option>
-                                <option value="Visitor or Tourist Visa">Visitor or Tourist Visa</option>
-                                <option value="Student Visa">Student Visa </option>
-                                <option value="Visa on Arrival (VOA)">Visa on Arrival (VOA)</option>
+                                <option selected disabled value="">Select type of Car Hire ...</option>
+                                <option value="Airport transfer">Airport transfer</option>
+                                <option value="Car Hire">Car Hire</option>
+                                <option value="Luxury service">Luxury service</option>
+                                <option value="Security Escort">Security Escort </option>
                             </select>
                         </label>
                         <label class="top">
-                            Nationality
-                            <select name="stormRegion" id="Nationality">
-                                <option selected disabled value="">Enter Nationality:</option>
-                            </select>
-                        </label>
-                        <label class="top">
-                            Passport Type
+                            Security Escort
                             <select name="stormRegion" placeholder="Select type of Visa">
-                                <option selected disabled value="">Enter Passport type:</option>
-                                <option value="Diplomatic Passport">Diplomatic Passport</option>
-                                <option value="Official Passport">Official Passport</option>
-                                <option value="Military Passport">Military Passport</option>
-                                <option value="Laissez-Passer">Laissez-Passer</option>
-                                <option value="Birth Certificate">Birth Certificate</option>
-                                <option value="Certificate of Citizenship">Certificate of Citizenship</option>
-                                <option value="Certificate of Naturalization">Certificate of Naturalization</option>
-                                <option value="Travel Permit">Travel Permit</option>
-                                <option value="Exit Permit">Exit Permit</option>
-                                <option value="Work Permit">Work Permit</option>
-                                <option>Travel Certificate</option>
+                                <option selected disabled value="">Select type of Car Hire ...</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
                             </select>
                         </label>
                         <label class="top">
-                            Issued By (Country)
-                            <select name="stormRegion" id="issued_by">
-                                <option selected disabled value="">Please enter Country name.</option>
+                            Rental option:
+                            <select name="stormRegion">
+                                <option selected disabled value="">Enter Rental option:</option>
+                                <option selected value="Self-drive">Whole day (Full day
+                                    6am-6pm - T&C applies)</option>
+                                <option selected value="Drop-off (Not exceeding 3hrs - T&C applies)">Drop-off (Not
+                                    exceeding 3hrs - T&C applies)</option>
                             </select>
                         </label>
                         <label class="top">
-                            Expiration date
-                            <input type="date" required />
-                        </label>
-
-                        <label class="top">
-                            Originating country
-                            <select name="stormRegion" id="Originating_country" required>
-                                <option selected disabled value="">Enter Name of Originating Country</option>
+                            Number of Passengers
+                            <select name="stormRegion">
+                                <option selected disabled value="">Enter Number of Passengers</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10 or More">10 or More</option>
                             </select>
                         </label>
                         <label class="top">
-                            Country of Arrival
-                            <select name="stormRegion" id="Country_of_Arrival">
-                                <option selected disabled value="">Enter Country of Arrival</option>
+                            Drive option:
+                            <select name="stormRegion">
+                                <option selected disabled value="">Enter Rental option:</option>
+                                <option value="Self-drive">Self-drive</option>
+                                <option value="Chauffeur driven.">Chauffeur driven.</option>
                             </select>
+                        </label>
+                        <label class="top">
+                            Preferred Rental Company (Optional)
+                            <input type="text" name="rental" required />
+                        </label>
+                        <label class="top">
+                            Vehicle type:
+                            <select name="stormRegion">
+                                <option selected disabled value="">Enter Rental option:</option>
+                                <option value="Salon Car">Salon Car</option>
+                                <option value="Mini SUV">Mini SUV</option>
+                                <option value="SUV Bus">SUV Bus</option>
+                                <option value="Coaster bus">Coaster bus</option>
+                            </select>
+                        </label>
+                        <label class="top">
+                            Pick-up location
+                            <input type="text" name="rental" required />
+                        </label>
+                        <label class="top">
+                            Pick-up Date and time
+                            <input type="datetime-local" name="rental" required />
+                        </label>
+                        <label class="top">
+                            Drop-off location
+                            <input type="text" name="rental" required />
+                        </label>
+                        <label class="top">
+                            Car rental Loyalty number (International only)
+                            <input type="text" name="rental" required />
                         </label>
                     </fieldset>
                     <center><input class="submitBtn" type="submit" value="Submit" /></center>
@@ -164,7 +189,7 @@
             </div>
             <div>
                 <a href="//google.com">
-                    1 Idona Street <br> Opposite Eye Foundation Center <br> Ijebu-imushin <br> Ogun.
+                    No. 45, <br> Oduduwa Way, GRA Ikeja, <br> Lagos, <br>Nigeria.
                 </a>
             </div>
             <div>
