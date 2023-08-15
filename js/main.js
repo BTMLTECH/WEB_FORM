@@ -50,7 +50,7 @@ currentDateSpan.textContent = new Intl.DateTimeFormat("en-GB", {
 }).format(now);
 
 async function loadCountry() {
-  const country = await fetch("http://143.198.122.86:4000/country");
+  const country = await fetch("https://api.yeve.co.uk/country");
   const data = await country.json();
   console.log(data);
   let elementOption = `<option selected disabled value="">Please enter Country name.</option>`;
