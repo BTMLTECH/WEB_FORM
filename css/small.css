@@ -124,7 +124,10 @@ header {
 }
 
 #menu ul li.active a {
-  color: #d0dd15;
+  color: #f5a412;
+}
+#hero_image {
+  filter: brightness(50%);
 }
 
 #menu ul li a {
