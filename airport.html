@@ -64,7 +64,7 @@
             <h1>Nigeria's Leading Travel Management Company</h1>
         </div>
         <section id="contact">
-            <h1>Visa and Immigration Services</h1>
+            <h1>Airport Concierge Services</h1>
             <div>
                 <form action="thanks.html" style="width: 100%;">
                     <fieldset>
@@ -89,61 +89,103 @@
                     <fieldset>
                         <legend>Airport Concierge Services</legend>
                         <label class="top">
-                            Select type of Visa
+                            Select type of Flight
                             <select name="stormRegion" placeholder="Select type of Visa">
-                                <option selected disabled value="">Select type of Visa ...</option>
-                                <option value="Business Visa">Business Visa</option>
-                                <option value="Visitor or Tourist Visa">Visitor or Tourist Visa</option>
-                                <option value="Student Visa">Student Visa </option>
-                                <option value="Visa on Arrival (VOA)">Visa on Arrival (VOA)</option>
+                                <option selected disabled value="">Select type Flight ...</option>
+                                <option value="International">International</option>
+                                <option value="Domestic">Domestic</option>
                             </select>
                         </label>
                         <label class="top">
-                            Nationality
-                            <select name="stormRegion" id="Nationality">
-                                <option selected disabled value="">Enter Nationality:</option>
-                            </select>
-                        </label>
-                        <label class="top">
-                            Passport Type
+                            Select type of Meet and Greet
                             <select name="stormRegion" placeholder="Select type of Visa">
-                                <option selected disabled value="">Enter Passport type:</option>
-                                <option value="Diplomatic Passport">Diplomatic Passport</option>
-                                <option value="Official Passport">Official Passport</option>
-                                <option value="Military Passport">Military Passport</option>
-                                <option value="Laissez-Passer">Laissez-Passer</option>
-                                <option value="Birth Certificate">Birth Certificate</option>
-                                <option value="Certificate of Citizenship">Certificate of Citizenship</option>
-                                <option value="Certificate of Naturalization">Certificate of Naturalization</option>
-                                <option value="Travel Permit">Travel Permit</option>
-                                <option value="Exit Permit">Exit Permit</option>
-                                <option value="Work Permit">Work Permit</option>
-                                <option>Travel Certificate</option>
+                                <option selected disabled value="">Select type of Meeting and Greet ...</option>
+                                <option value="Standard Meet and Greet">Standard Meet and Greet</option>
+                                <option value="VIP Meet and Greet">VIP Meet and Greet</option>
                             </select>
                         </label>
                         <label class="top">
-                            Issued By (Country)
-                            <select name="stormRegion" id="issued_by">
-                                <option selected disabled value="">Please enter Country name.</option>
+                            Number of Passengers
+                            <select name="stormRegion">
+                                <option selected disabled value="">Enter Number of Passengers</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10 or More">10 or More</option>
                             </select>
                         </label>
                         <label class="top">
-                            Expiration date
+                            Select Meet and Greet Description
+                            <select name="stormRegion" placeholder="Select type of Visa">
+                                <option selected disabled value="">Select type of Meeting and Greet Description...
+                                </option>
+                                <option value="Arrival">Arrival</option>
+                                <option value="Departure">Departure</option>
+                                <option value="Both">Both</option>
+                            </select>
+                        </label>
+                        <label class="top">
+                            Departure Date
                             <input type="date" required />
+
+                        </label>
+                        <label class="top">
+                            Departure Airport
+                            <input type="text" name="rental" required />
                         </label>
 
                         <label class="top">
-                            Originating country
-                            <select name="stormRegion" id="Originating_country" required>
-                                <option selected disabled value="">Enter Name of Originating Country</option>
+                            Arrival Date
+                            <input type="date" required />
+
+                        </label>
+                        <label class="top">
+                            Arrival Airport
+                            <input type="text" name="rental" required />
+                        </label>
+
+                        <label class="top">
+                            Select Trolley service
+                            <select name="stormRegion">
+                                <option value="Yes">Yes</option>
+                                <option selected value="No">No</option>
+                            </select>
+                        </label>
+
+                        <label class="top">
+                            Collect my boarding pass in advance (Applicable for flight within Nigeria only)
+                            <select name="stormRegion">
+                                <option value="Yes">Yes</option>
+                                <option selected value="No">No</option>
+                            </select>
+                        </label>
+
+                        <label class="top">
+                            Airport Lounge Access
+                            <select name="stormRegion" placeholder="Select type of Visa">
+                                <option selected disabled value="">Select type of Airport Lounge Access
+                                </option>
+                                <option value="Arrival">Arrival</option>
+                                <option value="Departure">Departure</option>
+                                <option value="Both">Both</option>
+                                <option value="none">None</option>
                             </select>
                         </label>
                         <label class="top">
-                            Country of Arrival
-                            <select name="stormRegion" id="Country_of_Arrival">
-                                <option selected disabled value="">Enter Country of Arrival</option>
-                            </select>
+                            BTM Discount / Voucher number
+                            <input type="text" name="Discount" placeholder="Please input Discount number" />
                         </label>
+                        <label class="top">
+                            Additional or Special request
+                            <input type="text" name="Discount" placeholder="Please input Discount number" />
+                        </label>
+
                     </fieldset>
                     <center><input class="submitBtn" type="submit" value="Submit" /></center>
                 </form>
