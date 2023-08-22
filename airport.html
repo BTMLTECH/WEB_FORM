@@ -66,7 +66,7 @@
         <section id="contact">
             <h1>Airport Concierge Services</h1>
             <div>
-                <form action="thanks.html" style="width: 100%;">
+                <form style="width: 100%;" id='form'>
                     <fieldset>
                         <legend>BIO DATA</legend>
                         <label class="top">
@@ -99,7 +99,7 @@
                         <label class="top">
                             Select type of Meet and Greet
                             <select name="stormRegion" placeholder="Select type of Visa">
-                                <option selected disabled value="">Select type of Meeting and Greet ...</option>
+                                <option selected disabled value="">Select type of Meet and Greet ...</option>
                                 <option value="Standard Meet and Greet">Standard Meet and Greet</option>
                                 <option value="VIP Meet and Greet">VIP Meet and Greet</option>
                             </select>
@@ -123,7 +123,7 @@
                         <label class="top">
                             Select Meet and Greet Description
                             <select name="stormRegion" placeholder="Select type of Visa">
-                                <option selected disabled value="">Select type of Meeting and Greet Description...
+                                <option selected disabled value="">Select Description...
                                 </option>
                                 <option value="Arrival">Arrival</option>
                                 <option value="Departure">Departure</option>
@@ -183,8 +183,20 @@
                         </label>
                         <label class="top">
                             Additional or Special request
-                            <input type="text" name="Discount" placeholder="Please input Discount number" />
+                            <input type="text" name="Discount" placeholder="Please input special request" />
                         </label>
+
+                        <div>
+                            How did you hear about <br />
+                            <input type="radio" id="contactChoice1" name="contact" value="email" />
+                            <label for="contactChoice1">Email</label><br>
+
+                            <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                            <label for="contactChoice2">Phone</label><br>
+
+                            <input type="radio" id="contactChoice3" name="contact" value="mail" />
+                            <label for="contactChoice3">Mail</label><br>
+                        </div>
 
                     </fieldset>
                     <center><input class="submitBtn" type="submit" value="Submit" /></center>

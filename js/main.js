@@ -1,3 +1,8 @@
+// window.addEventListener("load", (event) => {
+//   document.getElementById("modal").style.display = "none";
+//   console.log("page is fully loaded");
+// });
+
 // Webfont Loader
 WebFont.load({
   google: {
@@ -67,19 +72,16 @@ async function loadCountry() {
   Originating_country.innerHTML = elementOption;
   console.log(Nationality);
 }
+const form = document.getElementById("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const data = new FormData(form);
+  console.log(data);
 
-form.addEventListener(
-  "submit",
-  (event) => {
-    const data = new FormData(form);
-    let output = "";
-    for (const entry of data) {
-      output = `${output}${entry[0]}=${entry[1]}\r`;
-    }
-    log.innerText = output;
-    event.preventDefault();
-  },
-  false
-);
+  document.getElementById("modal").classList.add("modal_open");
+});
 
+document.getElementById("modal").addEventListener("click", () => {
+  document.getElementById("modal").classList.remove("modal_open");
+});
 loadCountry();
