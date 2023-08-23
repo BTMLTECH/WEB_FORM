@@ -76,6 +76,7 @@ const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(form);
+  form.reset();
   console.log(data);
 
   document.getElementById("modal").classList.add("modal_open");
