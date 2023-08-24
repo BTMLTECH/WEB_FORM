@@ -1,3 +1,37 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCZXipPZUtKgkDLg_--MegqvVfXF9G3eJQ",
+  authDomain: "btm-webform.firebaseapp.com",
+  databaseURL: "https://btm-webform-default-rtdb.firebaseio.com",
+  projectId: "btm-webform",
+  storageBucket: "btm-webform.appspot.com",
+  messagingSenderId: "588547210353",
+  appId: "1:588547210353:web:f4fa396c6b6ea42a27efd0",
+  measurementId: "G-8Q8XNVMYB3",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+import {
+  ref,
+  set,
+  child,
+  update,
+  remove,
+  getDatabase,
+} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
+
+const db = getDatabase();
+
 // window.addEventListener("load", (event) => {
 //   document.getElementById("modal").style.display = "none";
 //   console.log("page is fully loaded");
@@ -72,14 +106,37 @@ async function loadCountry() {
   Originating_country.innerHTML = elementOption;
   console.log(Nationality);
 }
+
+let dataJson = {};
 const form = document.getElementById("form");
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const data = new FormData(form);
-  form.reset();
-  console.log(data);
-
   document.getElementById("modal").classList.add("modal_open");
+  for (const [key, value] of data) {
+    dataJson[`${key}`] = value;
+  }
+  form.reset();
+  //console.log(data.getAll());
+
+  //const response = fetch("https://btm-webform-default-rtdb.firebaseio.com",);
+  const response = await fetch(
+    "https://btm-webform-default-rtdb.firebaseio.com/immigration",
+    {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: "follow", // manual, *follow, error
+      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: data, // body data type must match "Content-Type" header
+    }
+  );
+  console.log(dataJson);
 });
 
 document.getElementById("modal").addEventListener("click", () => {
