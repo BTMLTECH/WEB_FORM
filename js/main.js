@@ -133,7 +133,7 @@ form.addEventListener("submit", async (event) => {
       },
       redirect: "follow", // manual, *follow, error
       referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: data, // body data type must match "Content-Type" header
+      body: JSON.stringify(dataJson), // body data type must match "Content-Type" header
     }
   );
   console.log(dataJson);
