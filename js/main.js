@@ -1,36 +1,36 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCZXipPZUtKgkDLg_--MegqvVfXF9G3eJQ",
-  authDomain: "btm-webform.firebaseapp.com",
-  databaseURL: "https://btm-webform-default-rtdb.firebaseio.com",
-  projectId: "btm-webform",
-  storageBucket: "btm-webform.appspot.com",
-  messagingSenderId: "588547210353",
-  appId: "1:588547210353:web:f4fa396c6b6ea42a27efd0",
-  measurementId: "G-8Q8XNVMYB3",
-};
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCZXipPZUtKgkDLg_--MegqvVfXF9G3eJQ",
+//   authDomain: "btm-webform.firebaseapp.com",
+//   databaseURL: "https://btm-webform-default-rtdb.firebaseio.com",
+//   projectId: "btm-webform",
+//   storageBucket: "btm-webform.appspot.com",
+//   messagingSenderId: "588547210353",
+//   appId: "1:588547210353:web:f4fa396c6b6ea42a27efd0",
+//   measurementId: "G-8Q8XNVMYB3",
+// };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
-import {
-  ref,
-  set,
-  child,
-  update,
-  remove,
-  getDatabase,
-} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
+// import {
+//   ref,
+//   set,
+//   child,
+//   update,
+//   remove,
+//   getDatabase,
+// } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
 
-const db = getDatabase();
+// const db = getDatabase();
 
 // window.addEventListener("load", (event) => {
 //   document.getElementById("modal").style.display = "none";
