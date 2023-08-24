@@ -121,7 +121,7 @@ form.addEventListener("submit", async (event) => {
 
   //const response = fetch("https://btm-webform-default-rtdb.firebaseio.com",);
   const response = await fetch(
-    "https://btm-webform-default-rtdb.firebaseio.com/immigration",
+    "https://btm-webform-default-rtdb.firebaseio.com/immigration.json",
     {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
