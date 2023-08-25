@@ -71,26 +71,26 @@
                         <legend>BIO DATA</legend>
                         <label class="top">
                             Title
-                            <input type="text" name="title" placeholder="Mr/Mrs/Miss/Other" required />
+                            <input type="text" name="Title" placeholder="Mr/Mrs/Miss/Other" required />
                         </label>
                         <label class="top">
                             Name (as it appears on passport)
-                            <input type="text" name="firstname" required />
+                            <input type="text" name="Full_name" required />
                         </label>
                         <label class="top">
                             Email
-                            <input type="email" name="email" placeholder="username@domain.com" required />
+                            <input type="email" name="Email" placeholder="username@domain.com" required />
                         </label>
                         <label class="top">
                             Phone Number (Include Country code)
-                            <input type="tel" name="phone" required />
+                            <input type="tel" name="Phone_Number" required />
                         </label>
                     </fieldset>
                     <fieldset>
                         <legend>Car Hire Services Info</legend>
                         <label class="top">
                             Select type of Car Hire
-                            <select name="stormRegion" placeholder="Select type of Visa">
+                            <select name="Car_Hire" placeholder="Select type of Visa">
                                 <option selected disabled value="">Select type of Car Hire ...</option>
                                 <option value="Airport transfer">Airport transfer</option>
                                 <option value="Car Hire">Car Hire</option>
@@ -100,7 +100,7 @@
                         </label>
                         <label class="top">
                             Security Escort
-                            <select name="stormRegion" placeholder="Select type of Visa">
+                            <select name="Security_Escort" placeholder="Select type of Visa">
                                 <option selected disabled value="">Add security Escort ...</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -108,7 +108,7 @@
                         </label>
                         <label class="top">
                             Rental option:
-                            <select name="stormRegion">
+                            <select name="Rental_Option">
                                 <option selected disabled value="">Enter Rental option:</option>
                                 <option selected value="Self-drive">Whole day (Full day
                                     6am-6pm - T&C applies)</option>
@@ -118,7 +118,7 @@
                         </label>
                         <label class="top">
                             Number of Passengers
-                            <select name="stormRegion">
+                            <select name="Number_of_Passengers">
                                 <option selected disabled value="">Enter Number of Passengers</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -134,7 +134,7 @@
                         </label>
                         <label class="top">
                             Drive option:
-                            <select name="stormRegion">
+                            <select name="Drive_Option">
                                 <option selected disabled value="">Enter Rental option:</option>
                                 <option value="Self-drive">Self-drive</option>
                                 <option value="Chauffeur driven.">Chauffeur driven.</option>
@@ -142,11 +142,11 @@
                         </label>
                         <label class="top">
                             Preferred Rental Company (Optional)
-                            <input type="text" name="rental" required />
+                            <input type="text" name="Rental_Company" />
                         </label>
                         <label class="top">
                             Vehicle type:
-                            <select name="stormRegion">
+                            <select name="Vehicle_Type">
                                 <option selected disabled value="">Enter Rental option:</option>
                                 <option value="Salon Car">Salon Car</option>
                                 <option value="SUV">Mini SUV</option>
@@ -157,19 +157,19 @@
                         </label>
                         <label class="top">
                             Pick-up location
-                            <input type="text" name="rental" required />
+                            <input type="text" name="Pick_up_location" required />
                         </label>
                         <label class="top">
                             Pick-up Date and time
-                            <input type="datetime-local" name="rental" required />
+                            <input type="datetime-local" name="Pick_up_Date" required />
                         </label>
                         <label class="top">
                             Drop-off location
-                            <input type="text" name="rental" required />
+                            <input type="text" name="Drop_off_Location" required />
                         </label>
                         <label class="top">
                             Car rental Loyalty number
-                            <input type="text" name="rental" required />
+                            <input type="text" name="Loyalty_Number" required />
                         </label>
                     </fieldset>
                     <center><input class="submitBtn" type="submit" value="Submit" /></center>
@@ -231,7 +231,7 @@
         </center>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/car.js"></script>
 </body>
 
 </html>

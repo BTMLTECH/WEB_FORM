@@ -68,26 +68,26 @@
             <legend>BIO DATA</legend>
             <label class="top">
               Title
-              <input type="text" name="title" placeholder="Mr/Mrs/Miss/Other" />
+              <input type="text" name="Title" placeholder="Mr/Mrs/Miss/Other" required />
             </label>
             <label class="top">
               Name (as it appears on passport)
-              <input type="text" name="firstname" required />
+              <input type="text" name="Full_name" required />
             </label>
             <label class="top">
               Email
-              <input type="email" name="email" placeholder="username@domain.com" required />
+              <input type="email" name="Email" placeholder="username@domain.com" required />
             </label>
             <label class="top">
               Phone Number (Include Country code)
-              <input type="tel" name="phone" required />
+              <input type="tel" name="Phone_Number" required />
             </label>
           </fieldset>
           <fieldset>
             <legend>Visa and Immigration Info</legend>
             <label class="top">
               Select type of Visa
-              <select name="stormRegion" placeholder="Select type of Visa">
+              <select name="Visa_Type" placeholder="Select type of Visa">
                 <option selected disabled value="">Select type of Visa ...</option>
                 <option value="Business Visa">Business Visa</option>
                 <option value="Visitor or Tourist Visa">Visitor or Tourist Visa</option>
@@ -97,13 +97,13 @@
             </label>
             <label class="top">
               Nationality
-              <select name="stormRegion" id="Nationality">
+              <select name="Nationality" id="Nationality">
                 <option selected disabled value="">Enter Nationality:</option>
               </select>
             </label>
             <label class="top">
               Passport Type
-              <select name="stormRegion" placeholder="Select type of Visa">
+              <select name="Passport_Type" placeholder="Select type of Visa">
                 <option selected disabled value="">Enter Passport type:</option>
                 <option value="Diplomatic Passport">Diplomatic Passport</option>
                 <option value="Official Passport">Official Passport</option>
@@ -120,24 +120,24 @@
             </label>
             <label class="top">
               Issued By (Country)
-              <select name="stormRegion" id="issued_by">
+              <select name="Issued_By" id="issued_by">
                 <option selected disabled value="">Please enter Country name.</option>
               </select>
             </label>
             <label class="top">
               Expiration date
-              <input type="date" required />
+              <input type="date" required name="expiration_date" />
             </label>
 
             <label class="top">
               Originating country
-              <select name="stormRegion" id="Originating_country" required>
+              <select name="Originating_Country" id="Originating_country" required>
                 <option selected disabled value="">Enter Name of Originating Country</option>
               </select>
             </label>
             <label class="top">
               Country of Arrival
-              <select name="stormRegion" id="Country_of_Arrival">
+              <select name="Country_of_Arrival" id="Country_of_Arrival">
                 <option selected disabled value="">Enter Country of Arrival</option>
               </select>
             </label>

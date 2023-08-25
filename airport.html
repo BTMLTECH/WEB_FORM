@@ -73,26 +73,26 @@
                         <legend>BIO DATA</legend>
                         <label class="top">
                             Title
-                            <input type="text" name="title" placeholder="Mr/Mrs/Miss/Other" />
+                            <input type="text" name="Title" placeholder="Mr/Mrs/Miss/Other" required />
                         </label>
                         <label class="top">
                             Name (as it appears on passport)
-                            <input type="text" name="firstname" required />
+                            <input type="text" name="Full_name" required />
                         </label>
                         <label class="top">
                             Email
-                            <input type="email" name="email" placeholder="username@domain.com" required />
+                            <input type="email" name="Email" placeholder="username@domain.com" required />
                         </label>
                         <label class="top">
                             Phone Number (Include Country code)
-                            <input type="tel" name="phone" required />
+                            <input type="tel" name="Phone_Number" required />
                         </label>
                     </fieldset>
                     <fieldset>
                         <legend>Airport Concierge Services</legend>
                         <label class="top">
                             Select type of Flight
-                            <select name="stormRegion" placeholder="Select type of Visa">
+                            <select name="type_of_flight" placeholder="Select type of Visa">
                                 <option selected disabled value="">Select type Flight ...</option>
                                 <option value="International">International</option>
                                 <option value="Domestic">Domestic</option>
@@ -100,7 +100,7 @@
                         </label>
                         <label class="top">
                             Select type of Meet and Greet
-                            <select name="stormRegion" placeholder="Select type of Visa">
+                            <select name="type_of_Meet_and_Greet" placeholder="Select type of Visa">
                                 <option selected disabled value="">Select type of Meet and Greet ...</option>
                                 <option value="Standard Meet and Greet">Standard Meet and Greet</option>
                                 <option value="VIP Meet and Greet">VIP Meet and Greet</option>
@@ -108,7 +108,7 @@
                         </label>
                         <label class="top">
                             Number of Passengers
-                            <select name="stormRegion">
+                            <select name="Number_of_Passengers">
                                 <option selected disabled value="">Enter Number of Passengers</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -124,7 +124,7 @@
                         </label>
                         <label class="top">
                             Select Meet and Greet Description
-                            <select name="stormRegion" placeholder="Select type of Visa">
+                            <select name="Meet_and_Greet_Description" placeholder="Select type of Visa">
                                 <option selected disabled value="">Select Description...
                                 </option>
                                 <option value="Arrival">Arrival</option>
@@ -134,27 +134,27 @@
                         </label>
                         <label class="top">
                             Departure Date
-                            <input type="date" required />
+                            <input type="date" required name="Departure_Date" />
 
                         </label>
                         <label class="top">
                             Departure Airport
-                            <input type="text" name="rental" required />
+                            <input type="text" name="Departure_Airport" required />
                         </label>
 
                         <label class="top">
                             Arrival Date
-                            <input type="date" required />
+                            <input type="date" required name="Arrival_Date" />
 
                         </label>
                         <label class="top">
                             Arrival Airport
-                            <input type="text" name="rental" required />
+                            <input type="text" name="Arrival_Airport" required />
                         </label>
 
                         <label class="top">
                             Select Trolley service
-                            <select name="stormRegion">
+                            <select name="Trolley_Service">
                                 <option value="Yes">Yes</option>
                                 <option selected value="No">No</option>
                             </select>
@@ -162,7 +162,7 @@
 
                         <label class="top">
                             Collect my boarding pass in advance (Applicable for flight within Nigeria only)
-                            <select name="stormRegion">
+                            <select name="Collect_my_boarding">
                                 <option value="Yes">Yes</option>
                                 <option selected value="No">No</option>
                             </select>
@@ -170,7 +170,7 @@
 
                         <label class="top">
                             Airport Lounge Access
-                            <select name="stormRegion" placeholder="Select type of Visa">
+                            <select name="Airport_Lounge_Access" placeholder="Select type of Visa">
                                 <option selected disabled value="">Select type of Airport Lounge Access
                                 </option>
                                 <option value="Arrival">Arrival</option>
@@ -181,7 +181,7 @@
                         </label>
                         <label class="top">
                             BTM Discount / Voucher number
-                            <input type="text" name="Discount" placeholder="Please input Discount number" />
+                            <input type="text" name="BTM_Discount" placeholder="Please input Discount number" />
                         </label>
                         <label class="top">
                             Additional or Special request
@@ -260,7 +260,7 @@
         </center>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/airport.js"></script>
 </body>
 
 </html>

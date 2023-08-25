@@ -147,7 +147,8 @@ form.addEventListener("submit", async (event) => {
   for (const [key, value] of data) {
     dataJson[`${key}`] = value;
   }
-  const resquest = await httpRequest("immigration");
+
+  const resquest = await httpRequest("car");
   console.log("response", resquest);
   form.reset();
   //console.log(data.getAll());
