@@ -135,6 +135,44 @@ async function httpRequest(url) {
 
   return response.json();
 }
+
+/**
+ *
+ *
+ */
+async function updateImmigration() {
+  const tableBody = document.getElementById("table_body");
+  let bodyInner = ``;
+  let tableData = ``;
+  const response = await fetch(
+    `https://btm-webform-default-rtdb.firebaseio.com/immigration.json`
+  );
+  const result = await response.json();
+  //console.log(result);
+  for (const property in result) {
+    const answer = result[property];
+    tableData += `<tr>
+                        <td>${answer.Title}</td>
+                        <td>${answer.Full_name}</td>
+                        <td>${answer.Email}</td>
+                        <td>${answer.Phone_Number}</td>
+                        <td>${answer.Visa_Type}</td>
+                        <td>${answer.contact}</td>
+                        <td>${answer.Passport_Type}</td>
+                        <td>${answer.Nationality}</td>
+                        <td>${answer.Originating_Country}</td>
+                        <td>${answer.expiration_date}</td>
+                        <td>${answer.Issued_By}</td>
+                        <td>${answer.Country_of_Arrival}</td>
+                    </tr>`;
+  }
+  console.log(tableData);
+  tableBody.innerHTML = tableData;
+}
+
+updateImmigration();
+console.log("property");
+
 // get the form document
 const form = document.getElementById("form");
 /**
