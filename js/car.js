@@ -135,6 +135,50 @@ async function httpRequest(url) {
 
   return response.json();
 }
+
+/**
+ *
+ *
+ */
+async function updatecar() {
+  const tableBody = document.getElementById("table_body");
+  let bodyInner = ``;
+  let tableData = ``;
+  const response = await fetch(
+    `https://btm-webform-default-rtdb.firebaseio.com/car.json`
+  );
+  const result = await response.json();
+  console.log(result);
+  for (const property in result) {
+    const answer = result[property];
+    tableData += `<tr id=${property} class=tablerow>
+                        <td id=${property}>${answer.Title}</td>
+                        <td id=${property}>${answer.Full_name}</td>
+                        <td id=${property}>${answer.Email}</td>
+                        <td id=${property}>${answer.Phone_Number}</td>
+                        <td id=${property}>${answer.Car_Hire}</td>
+                        <td id=${property}>${answer.Drive_Option}</td>
+                        <td id=${property}>${answer.Drop_off_Location}</td>
+                        <td id=${property}>${answer.Loyalty_Number}</td>
+                        <td id=${property}>${answer.Number_of_Passengers}</td>
+                        <td id=${property}>${answer.Pick_up_Date}</td>
+                        <td id=${property}>${answer.Pick_up_location}</td>
+                        <td id=${property}>${answer.Rental_Company}</td>
+                        <td id=${property}>${answer.Rental_Option}</td>
+                        <td id=${property}>${answer.Security_Escort}</td>
+                        <td id=${property}>${answer.Vehicle_Type}</td>
+                    </tr>`;
+  }
+  console.log(tableData);
+  tableBody.innerHTML = tableData;
+  document
+    .querySelector(".tablerow")
+    .addEventListener("click", async (event) => {
+      console.log(event);
+    });
+}
+
+updatecar();
 // get the form document
 const form = document.getElementById("form");
 /**

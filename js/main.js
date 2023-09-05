@@ -151,27 +151,31 @@ async function updateImmigration() {
   //console.log(result);
   for (const property in result) {
     const answer = result[property];
-    tableData += `<tr>
-                        <td>${answer.Title}</td>
-                        <td>${answer.Full_name}</td>
-                        <td>${answer.Email}</td>
-                        <td>${answer.Phone_Number}</td>
-                        <td>${answer.Visa_Type}</td>
-                        <td>${answer.contact}</td>
-                        <td>${answer.Passport_Type}</td>
-                        <td>${answer.Nationality}</td>
-                        <td>${answer.Originating_Country}</td>
-                        <td>${answer.expiration_date}</td>
-                        <td>${answer.Issued_By}</td>
-                        <td>${answer.Country_of_Arrival}</td>
+    tableData += `<tr id=${property} class=tablerow>
+                        <td id=${property}>${answer.Title}</td>
+                        <td id=${property}>${answer.Full_name}</td>
+                        <td id=${property}>${answer.Email}</td>
+                        <td id=${property}>${answer.Phone_Number}</td>
+                        <td id=${property}>${answer.Visa_Type}</td>
+                        <td id=${property}>${answer.contact}</td>
+                        <td id=${property}>${answer.Passport_Type}</td>
+                        <td id=${property}>${answer.Nationality}</td>
+                        <td id=${property}>${answer.Originating_Country}</td>
+                        <td id=${property}>${answer.expiration_date}</td>
+                        <td id=${property}>${answer.Issued_By}</td>
+                        <td id=${property}>${answer.Country_of_Arrival}</td>
                     </tr>`;
   }
   console.log(tableData);
   tableBody.innerHTML = tableData;
+  document
+    .querySelector(".tablerow")
+    .addEventListener("click", async (event) => {
+      console.log(event);
+    });
 }
 
 updateImmigration();
-console.log("property");
 
 // get the form document
 const form = document.getElementById("form");
