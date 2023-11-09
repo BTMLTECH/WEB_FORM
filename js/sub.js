@@ -135,8 +135,44 @@ async function httpRequest(url) {
 
   return response.json();
 }
-
-//updatecar();
+async function update() {
+  const tableBody = document.getElementById("table_body");
+  let bodyInner = ``;
+  let tableData = ``;
+  const response = await fetch(
+    `https://btm-webform-default-rtdb.firebaseio.com/subcription.json`
+  );
+  const result = await response.json();
+  console.log(result);
+  for (const property in result) {
+    const answer = result[property];
+    tableData += `<tr id=${property} class=tablerow>
+                        <td id=${property}>${answer.Title}</td>
+                        <td id=${property}>${answer.Full_name}</td>
+                        <td id=${property}>${answer.Email}</td>
+                        <td id=${property}>${answer.Phone_Number}</td>
+                        <td id=${property}>${answer.Agency_name}</td>
+                        <td id=${property}>${answer.Business_name}</td>
+                        <td id=${property}>${answer.House_name}</td>
+                        <td id=${property}>${answer.registerd}</td>
+                        <td id=${property}>${answer.Company_Number}</td>
+                        <td id=${property}>${answer.IATA}</td>
+                        <td id=${property}>${answer.IATA_Number}</td>
+                        <td id=${property}>${answer.Platform_Type}</td>
+                        <td id=${property}>${answer.Social_Media}</td>
+                        <td id=${property}>${answer.Position_Held}</td>
+                        <td id=${property}>${answer.Social_Media}</td>
+                    </tr>`;
+  }
+  console.log(tableData);
+  tableBody.innerHTML = tableData;
+  document
+    .querySelector(".tablerow")
+    .addEventListener("click", async (event) => {
+      console.log(event);
+    });
+}
+update();
 // get the form document
 const form = document.getElementById("form");
 /**
