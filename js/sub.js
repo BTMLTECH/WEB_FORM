@@ -147,7 +147,6 @@ async function update() {
   for (const property in result) {
     const answer = result[property];
     tableData += `<tr id=${property} class=tablerow>
-                        <td id=${property}>${answer.Title}</td>
                         <td id=${property}>${answer.Full_name}</td>
                         <td id=${property}>${answer.Email}</td>
                         <td id=${property}>${answer.Phone_Number}</td>
