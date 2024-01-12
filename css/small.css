@@ -1,3 +1,75 @@
+#top nav > ul > li > a {
+  color: #3b4733;
+  font-size: 18px;
+  padding: 16px !important;
+}
+
+#top nav > ul > li:last-child > a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #3b4733;
+  /* background-color: #dd9933; yellow*/
+}
+
+#header-outer[data-lhe="animated_underline"]
+  #top
+  nav
+  > ul
+  > li
+  > a
+  .menu-title-text:after {
+  border-color: #b28241 !important;
+}
+
+.slide-out-widget-area-toggle.mobile-icon .lines-button.x2 .lines:after,
+.slide-out-widget-area-toggle.mobile-icon .lines-button.x2 .lines:before,
+.slide-out-widget-area-toggle.mobile-icon .lines-button:after {
+  background-color: #934327;
+}
+
+body p {
+  color: #414042;
+}
+
+h1 {
+  color: #934327;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #414042;
+}
+
+#footer-outer,
+#nectar_fullscreen_rows > #footer-outer.wpb_row .full-page-inner-wrap {
+  color: #934327;
+  position: relative;
+  z-index: 10;
+  background-color: rgb(255, 255, 6);
+}
+
+#footer-outer #copyright {
+  color: #934327;
+}
+
+#footer-outer .widget h4 {
+  color: #3b4733;
+  font-size: 18px;
+}
+
+#footer-outer ul li {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#footer-outer .icon-tiny[class^="icon-"].accent-color {
+  color: #3b4733;
+}
+
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
   -webkit-text-size-adjust: 100%;
