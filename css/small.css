@@ -199,7 +199,7 @@ header {
   color: #f5a412;
 }
 #hero_image {
-  filter: brightness(50%);
+  filter: brightness(80%);
 }
 
 #menu ul li a {
@@ -433,7 +433,7 @@ h4 {
 
 #summary > picture img {
   width: 100%;
-  max-height: 300px;
+  max-height: auto;
   object-fit: cover;
 }
 
@@ -511,7 +511,9 @@ img {
 }
 
 /* Form */
-
+#contact h1 {
+  color: #0076b2;
+}
 #contact > div {
   display: flex;
   width: 100%;
