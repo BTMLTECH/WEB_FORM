@@ -184,19 +184,68 @@ const form = document.getElementById("form");
  */
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const data = new FormData(form);
-  document.getElementById("modal").classList.add("modal_open");
-  for (const [key, value] of data) {
-    dataJson[`${key}`] = value;
+
+  const formData = Object.fromEntries(new FormData(form).entries());
+  const dataJson = { ...formData }; // For fallback
+  const modal = document.getElementById("modal");
+
+  modal.classList.add("modal_open");
+
+  // Primary submit attempt
+  try {
+    const response = await fetch("https://formweb-hxnd.onrender.com/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      form.reset();
+    } else {
+      console.warn("Primary server failed, falling back...");
+      await fallbackSubmission(dataJson);
+    }
+  } catch (error) {
+    console.error("Network error, trying fallback...", error);
+    await fallbackSubmission(dataJson);
+  } finally {
+    modal.classList.remove("modal_open");
   }
-  const resquest = await httpRequest("immigration");
-  console.log("response", resquest);
-  form.reset();
-  //console.log(data.getAll());
-  console.log(dataJson);
 });
 
-document.getElementById("modal").addEventListener("click", () => {
-  document.getElementById("modal").classList.remove("modal_open");
-});
+async function fallbackSubmission(dataJson) {
+  try {
+    const response = await httpRequest("immigration", dataJson); // You may need to adjust this to fit your httpRequest implementation
+
+    if (response && response.ok) {
+      alert("✅ Submitted via fallback successfully!");
+    } else {
+      console.error("Fallback failed:", response);
+    }
+  } catch (error) {
+    console.error("Fallback submission error:", error);
+  } finally {
+    form.reset();
+  }
+}
+
+// form.addEventListener("submit", async (event) => {
+//   event.preventDefault();
+//   const data = new FormData(form);
+//   document.getElementById("modal").classList.add("modal_open");
+//   for (const [key, value] of data) {
+//     dataJson[`${key}`] = value;
+//   }
+//   const resquest = await httpRequest("immigration");
+//   console.log("response", resquest);
+//   form.reset();
+//   //console.log(data.getAll());
+//   console.log(dataJson);
+// });
+
+// document.getElementById("modal").addEventListener("click", () => {
+//   document.getElementById("modal").classList.remove("modal_open");
+// });
 loadCountry();
