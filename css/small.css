@@ -130,8 +130,8 @@ header {
   align-items: center;
 }
 
-.logo > img {
-  width: 200px;
+.logo, .about-us > img {
+  width: 130px;
   margin-right: 7px;
 }
 

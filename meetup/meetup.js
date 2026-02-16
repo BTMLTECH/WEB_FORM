@@ -97,7 +97,7 @@ button.addEventListener("click", async (value) => {
       <div class="content">
         <p>Dear ${dataJson[`first_name`]},</p>
         <p>This email confirms your registration for the upcoming event:</p>
-        <div class="details"><span>Event Name:</span> Journeyeasy Meetup</div>
+        <div class="details"><span>Event Name:</span> Trave-Pro Meetup</div>
         <div class="details"><span>Date:</span> March 14th, 2024</div>
         <div class="details"><span>Time:</span> 11 am WAT</div>
         <div class="details"><span>Location:</span> Virtual</div>
@@ -113,7 +113,7 @@ button.addEventListener("click", async (value) => {
         </p>
         <p>See you there!</p>
         <p>Sincerely,</p>
-        <p>Journeyeasy.</p>
+        <p>Trave-Pro.</p>
       </div>
     </div>
   </body>
